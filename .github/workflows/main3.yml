@@ -49,7 +49,7 @@ jobs:
       
       - name: Docker Build
         run: | 
-          docker build --tag calorcab/paso:latest .
+          docker build --tag calorcab/paso
           docker images
 
       - name: Docker Push
