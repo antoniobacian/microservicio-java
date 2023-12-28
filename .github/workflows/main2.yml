@@ -49,9 +49,9 @@ jobs:
       
       - name: Docker Build
         run: | 
-          docker build --tag calorcab/usach-devops-foundation-lab:latest .
+          docker build --tag calorcab/paso:latest .
           docker images
 
       - name: Docker Push
         run: |
-          docker push calorcab/usach-devops-foundation-lab 
+          docker push calorcab/paso 
