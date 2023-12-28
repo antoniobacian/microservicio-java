@@ -49,9 +49,20 @@ jobs:
       
       - name: Docker Build
         run: | 
-          docker build --tag calorcab/paso
+          docker build --tag calorcab/paso:latest .
           docker images
 
       - name: Docker Push
         run: |
           docker push clorcab/paso
+          
+  deploy: 
+    runs-on: self-hosted 
+    needs: build
+    steps: 
+
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to Minikube
+      run: |
+        kubectl apply -f deployment.yml
