@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: petclinic-deployment
+  name: microservicio-java-deployment
   labels:
-    app: pet-clinic
+    app: microservicio-java
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pet-clinic
+      app: microservicio-java
   template:
     metadata:
       labels:
-        app: pet-clinic
+        app: pmicroservicio-java
     spec:
       containers:
-      - name: pet-clinic
-        image: clagosu/pet-clinic:latest
+      - name: microservicio-java
+        image: calorcab/microservicio-java:latest
         ports:
         - containerPort: 8085
