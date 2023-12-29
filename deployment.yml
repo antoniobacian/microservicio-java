@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: microservicio-java
+  name: microservicio-java-deployment
   labels:
     app: microservicio-java
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: microservicio-java
