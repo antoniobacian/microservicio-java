@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: microservicio-java
-        image: calorcab/microservicio-java:latest
+        image: calorcab/paso:latest
         ports:
         - containerPort: 8085
